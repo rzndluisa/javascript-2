@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dividir(a, b) {
+            try {
+                // Tenta realizar a divisão
+                if (b === 0) {
+                    throw new Error("Divisão por zero não é permitida."); // Lança uma exceção
+                }
+                return a / b; // Retorna o resultado da divisão
+            } catch (erro) {
+                console.error("Erro:", erro.message); // Trata o erro e exibe a mensagem
+            }
+        }
+
+        // Testando a função
+        console.log(dividir(10, 2));
+        console.log(dividir(10, 0));
+    </script>
+</body>
+
+</html>
