@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verfificarNumero(num)
+        {
+            if (num % 2 === 0) {
+                // Declarações dentro do bloco 'if'
+                let resultado = "O número é par."; // 'resultado' é acessível apenas dentro deste bloco
+                console.log(resultado); // Exibe: O número é par
+            } else {
+                let resultado = "O número é ímpar"; // 'resultado' neste bloco é diferente
+                console.log(resultado); // Exibe: o número é par
+            }
+            // Aqui, o 'resultado' não está definido, pois está fora do escopo dos blocos
+            // console.log(resultado); Erro: resultado não está definido 
+        }
+        
+        // Chamando a função
+        verfificarNumero(4);
+        verfificarNumero(7);
+    </script>
+</body>
+</html>
