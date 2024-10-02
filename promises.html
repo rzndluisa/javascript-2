@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Função que simula a vrificação da disponibilidade de um produto
+        function verfificarProdutoDisponivel(){
+            return new Promise (function (resolve, reject){
+                var produtoDisponivel = true;
+
+                // Simula um atraso de 1 segundo
+                setTimeout (function (){
+                    if (produtoDisponivel){
+                        resolve("Produto está disponível!");
+                    } else {
+                        reject ("Produto não disponível.");
+                    }
+                }, 1000); // Espera 1 segundo
+            });
+        }
+        // Usando a Promise
+        verfificarProdutoDisponivel().then(function(mensagem){
+            console.log(mensagem); // Exibe: Produto está disponível
+        }).catch(function(erro){
+            console.error(erro); // Exibe: Produto não disponível.
+        });
+    </script>
+</body>
+</html>
