@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    async function fazerDownload() {
+        return new Promise(function(resolve, reject)
+        {  setTimeout (function()
+        {
+            const sucesso = true;
+
+            if (sucesso){
+                resolve("Download concluído com sucesso!");
+            } else {
+                reject("Falha no download.");
+            }
+        }, 2000);
+        });
+    }
+    async function executarDownload() {
+        try{
+            const mensagem = await fazerDownload();
+            console.log(mensagem);
+        } catch (erro){
+            console.error(erro);
+        }
+        
+    }
+    // Chamando a função assíncrona
+    executarDownload();
+   </script>
+</body>
+</html>
